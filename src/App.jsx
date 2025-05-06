@@ -1,17 +1,32 @@
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
 import './App.css'
 import Header from './components/header'
 import ProductCard from './components/productCard';
+import HomePage from './pages/home';
+import LoginPage from './pages/login';
+import SignupPage from './pages/signup';
+import AdminPage from './pages/adminPage';
+
 
 function App() {
   
 
   return (
-    <>
-     <Header/>
-     <ProductCard name="One Hike" description="lorem djjd ueekj eksjr" price="1000" picture="https://picsum.photos/200/300/?blur"/>
-     <ProductCard name="Two Hike" description="lorem djjd ueekj eksjr" price="1000" picture="https://picsum.photos/200/300/?blur=2"/>
-     
-    </>
+   
+    <BrowserRouter>
+        <div>
+          <Routes path="/*">
+             <Route path="/" element={<HomePage/>}/>
+             <Route path="/login" element={<LoginPage/>}/>
+             <Route path="/signup" element={<SignupPage/>}/>
+
+             <Route path="/admin/*" element={<AdminPage/>}/>
+
+             <Route path='/*'element={<h1>404 Not Found</h1>}/>
+          </Routes>
+        </div>
+    </BrowserRouter>
+    
   )
 }
 

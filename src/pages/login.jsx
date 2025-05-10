@@ -1,24 +1,32 @@
 import axios from "axios"
 import { useState } from "react"
 import toast from "react-hot-toast"
+import { useNavigate } from "react-router-dom"
 
 export default function LoginPage(){
-
+    //hooks
     const[email,seteEmail]=useState("")
     const[password,setPassword]=useState("")
-
+    const navigate = useNavigate()
 
    async function handlelogin(){
     
 
         try{
-            const response= await axios.post("http://localhost:5000/users/login" ,{
+            const response= await axios.post(import.meta.env.VITE_BACKEND_URL+"/users/login" ,{
             email:email,
             password:password
         })
         //alert("Login Successful")
         toast.success("Login Successful")
         console.log(response.data)
+        localStorage.setItem("token",response.data.token)
+
+        if(response.data.role==="admin"){
+            navigate("/admin")
+        }else{
+            navigate("/")
+        }
 
         }catch(e){
            // alert(e.response.data.message) error code not a 200(error)

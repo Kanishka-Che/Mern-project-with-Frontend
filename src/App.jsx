@@ -34,3 +34,7 @@ function App() {
 }
 
 export default App
+
+
+//https://acqkjhucvmtoppzmtnns.supabase.co
+//eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFjcWtqaHVjdm10b3Bwem10bm5zIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDY5Mzg1OTksImV4cCI6MjA2MjUxNDU5OX0.cI1PurCfwyjef0X4wDsvWVyCkCuMTQtz73oAEMo7EoQ

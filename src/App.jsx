@@ -17,15 +17,15 @@ function App() {
    
     <BrowserRouter>
         <div>
-          <Toaster position='topright'/> 
+          <Toaster position='top-right'/> 
           <Routes path="/*">
-             <Route path="/" element={<HomePage/>}/>
              <Route path="/login" element={<LoginPage/>}/>
              <Route path="/register" element={<RegisterPage/>}/>
              <Route path="/testing"  element={<TestPage/>}/>
              <Route path="/admin/*" element={<AdminPage/>}/>
+             <Route path="/" element={<HomePage/>}/>
 
-             <Route path='/*'element={<h1>404 Not Found</h1>}/>
+            
           </Routes>
         </div>
     </BrowserRouter>
@@ -33,7 +33,7 @@ function App() {
   )
 }
 
-export default App
+export default App;
 
 
 //https://acqkjhucvmtoppzmtnns.supabase.co

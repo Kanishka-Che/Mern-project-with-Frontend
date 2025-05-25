@@ -4,10 +4,10 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 export default function RegisterPage() {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const navigate = useNavigate();
 
     async function handleRegister() {

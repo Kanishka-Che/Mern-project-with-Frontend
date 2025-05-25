@@ -1,15 +1,52 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
-import mediaUpload from "../../utils/mediaUpload.js";
-
+import mediaUpload from "../../utils/mediaUpload";
 import axios from "axios";
 
-
-export default function AddProductPage(){
-
-
-const [productId, setProductId] = useState("");
+export default function AddProductPage() {
+	/*
+    
+const productSchema = mongoose.Schema({
+	productId : {
+		type : String,
+		required : true,
+		unique : true
+	},
+	name : {
+		type : String,
+		required : true
+	},
+	altNames : [
+		{type : String}
+	],
+	description : {
+		type : String,
+		required : true
+	},
+	images : [
+		{type : String}
+	],
+	labelledPrice : {
+		type : Number,
+		required : true
+	},
+	price : {
+		type : Number,
+		required : true
+	},
+	stock : {
+		type : Number,
+		required : true
+	},
+	isAvailable : {
+		type : Boolean,
+		required : true,
+		default : true
+	},
+});
+    */
+	const [productId, setProductId] = useState("");
 	const [name, setName] = useState("");
 	const [altNames, setAltNames] = useState("");
 	const [description, setDescription] = useState("");
@@ -17,10 +54,9 @@ const [productId, setProductId] = useState("");
 	const [labelledPrice, setLabelledPrice] = useState(0);
 	const [price, setPrice] = useState(0);
 	const [stock, setStock] = useState(0);
-
     const navigate = useNavigate()
-    
-    async function AddProduct() {
+
+	async function AddProduct() {
 
         const token = localStorage.getItem("token")
         if(token == null){
@@ -28,7 +64,7 @@ const [productId, setProductId] = useState("");
             return
         }
 
-            if (images.length <= 0) {
+		if (images.length <= 0) {
 			toast.error("Please select at least one image");
 			return;
 		}
@@ -42,10 +78,9 @@ const [productId, setProductId] = useState("");
 			const imageUrls = await Promise.all(promisesArray);
 			console.log(imageUrls);
 
+            const altNamesArray = altNames.split(",")
 
-         const altNamesArray = altNames.split(",")
-
-              const product = {
+            const product = {
                 productId : productId,
                 name : name,
                 altNames : altNamesArray,
@@ -70,14 +105,9 @@ const [productId, setProductId] = useState("");
 			console.log(e);
 		}
 	}
-
-
-
-
-    return(
-        <div className="w-full h-full flex flex-col justify-center items-center ">
-
-            <input
+	return (
+		<div className="w-full h-full flex flex-col justify-center items-center">
+			<input
 				type="text"
 				placeholder="Product ID"
 				className="input input-bordered w-full max-w-xs"
@@ -163,11 +193,6 @@ const [productId, setProductId] = useState("");
 					Add Product
 				</button>
 			</div>
-
-
-
-
-
-        </div>
-    )
+		</div>
+	);
 }

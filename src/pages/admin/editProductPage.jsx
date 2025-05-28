@@ -5,7 +5,7 @@ import mediaUpload from "../../utils/mediaUpload";
 import axios from "axios";
 
 export default function EditProductPage() {
-    const location = useLocation()
+    const location = useLocation()//get a json/ get read information 
 	const [productId, setProductId] = useState(location.state.productId);
 	const [name, setName] = useState(location.state.name);
 	const [altNames, setAltNames] = useState(location.state.altNames.join(","));

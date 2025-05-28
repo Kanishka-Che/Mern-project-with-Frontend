@@ -16,10 +16,10 @@ export default function AdminProductsPage() {
 				.then((res) => {
 					console.log(res.data);
 					setProducts(res.data);
-					setIsLoading(false);
+					setIsLoading(false);//after loaded
 				});
 		}
-	}, [isLoading]);
+	}, [isLoading]);//useEffect sensitive based on that (it can be include booliun,number,etc like smole value)
 
 	function deleteProduct(productId) {
 		const token = localStorage.getItem("token");

@@ -1,1 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&family=Dancing+Script:wght@400..700&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,300;0,400;0,800;1,300;1,500;1,600&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import "tailwindcss";
+
+@theme{
+    --color-primary:#FBFBFB;
+    --color-secondary:#393E46;
+    --color-accent:#C5BAFF;
+    --font-main:"Baskervville",sans-serif;
+}
+ 

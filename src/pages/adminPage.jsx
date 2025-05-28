@@ -1,6 +1,6 @@
 import { Link, Route, Routes } from "react-router-dom";
 import AddProductPage from "./admin/addProductPage";
-import AdminProductsPage from "./admin/adminPage";
+import AdminProductsPage from "./admin/ProductsPage";
 import EditProductPage from "./admin/editProductPage";
 
 export default function AdminPage() {

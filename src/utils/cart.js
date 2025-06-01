@@ -3,12 +3,12 @@ export function getCart() {
     
 	if (cart == null) {
 		cart = [];
-		localStorage.setItem("cart", JSON.stringify(cart));
+		localStorage.setItem("cart", JSON.stringify(cart));//json.stringify(cart)== all array convert to string 
 	}else{
-        cart = JSON.parse(cart);
+        cart = JSON.parse(cart);//convart string to array
     }
 	return cart;
-}
+}// above function is get saved(in local storage) cart
 
 export function removeFromCart(productId) {
     let cart = getCart();

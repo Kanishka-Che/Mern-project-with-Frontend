@@ -10,7 +10,7 @@ export default function ProductOverviewPage() {
 	const params = useParams();
 	const productId = params.id;
 	const [status, setStatus] = useState("loading"); //loading , success , error
-	const [product, setProduct] = useState(null);//product
+	const [product, setProduct] = useState(null);
 	const navigate = useNavigate();
 
 	useEffect(() => {
@@ -108,6 +108,6 @@ export default function ProductOverviewPage() {
 				</div>
 			)}
 			{status == "loading" && <Loading />}
-		</>// one empty tag use becouse saport to return
+		</>
 	);
 }

@@ -18,13 +18,13 @@ export default function mediaUpload(file){
                     return
                 }
                 const timestamp = new Date().getTime()//uniq value genarate depending on time
-                const newName = timestamp+file.name
+                const newName = timestamp + file.name;
 
                   supabase.storage.from("images").upload(newName ,file, {
                 upsert:false,
                 cacheControl:"3600"
                 }).then(()=>{
-                    const publicUrl=supabase.storage.from("image").getPublicUrl(newName).data.publicUrl//supabase eke image bucket eke imageURL eka
+                    const publicUrl=supabase.storage.from("images").getPublicUrl(newName).data.publicUrl//supabase eke image bucket eke imageURL eka
                     resolve(publicUrl)
 
                 }).catch(

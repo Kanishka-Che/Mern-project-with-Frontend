@@ -15,7 +15,7 @@ export default function TestPage(){
         (res)=>{
             console.log(res)
         }
-      )//const Url=await mediaUpload(image)==async function
+      )//(if use)const Url=await mediaUpload(image)==async function
       
     }
    

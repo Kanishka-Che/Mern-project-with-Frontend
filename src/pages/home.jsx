@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "../components/header";
 import ProductPage from "./client/productPage";
-import ProductOverviewPage from "./client/productOverview";
+import ProductOverviewPage from "./client/productOverView";
 import CartPage from "./client/cart";
 import CheckoutPage from "./client/checkOut";
 

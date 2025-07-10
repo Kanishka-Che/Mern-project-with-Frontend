@@ -11,6 +11,10 @@ node_modules
 dist
 dist-ssr
 *.local
+<<<<<<< HEAD
+.env
+=======
+>>>>>>> 529a2ec (initial commit one)
 
 # Editor directories and files
 .vscode/*
@@ -22,4 +26,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-.env

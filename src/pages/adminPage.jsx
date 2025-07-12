@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link, Route, Routes, useLocation } from "react-router-dom";
 import AddProductPage from "./admin/addProductPage";
 import AdminProductsPage from "./admin/ProductsPage";
@@ -11,6 +12,7 @@ export default function AdminPage() {
     const location=useLocation();
     const path= location.pathname;
     const [status, setStatus] = useState("loading");
+
 
     useEffect(() => {
 		const token = localStorage.getItem("token");

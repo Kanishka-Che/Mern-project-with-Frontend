@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from "react"
 import { addToCart, getCart, getTotal, removeFromCart } from "../../utils/cart"
 import { BiMinus, BiPlus, BiTrash } from "react-icons/bi"

@@ -55,9 +55,6 @@ export default function LoginPage(){
             toast.error(e.response.data.message)
         }
         
-
-
-
     }
 
     return(

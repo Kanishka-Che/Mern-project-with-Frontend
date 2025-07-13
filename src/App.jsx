@@ -10,11 +10,13 @@ import RegisterPage from './pages/register'
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import ForgetPasswordPage from './pages/forgetPassword'
 
+
 function App() {
  
+  
 
   return (
-    <GoogleOAuthProvider clientId="37337765557-5qck0erqtvg70n7fuldt6t82ovtvgrfo.apps.googleusercontent.com">
+    <GoogleOAuthProvider clientId="VITE_GOOGLE_CLIENT_ID">
     <BrowserRouter>
       <div >
         <Toaster position='top-right'/>

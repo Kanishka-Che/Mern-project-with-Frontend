@@ -3,6 +3,7 @@ import { Link, Route, Routes, useLocation } from "react-router-dom";
 import AddProductPage from "./admin/addProductPage";
 import AdminProductsPage from "./admin/ProductsPage";
 import EditProductPage from "./admin/editProductPage";
+import AdminOrdersPage from './admin/adminOrdersPage';
 import { useEffect, useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -67,7 +68,7 @@ export default function AdminPage() {
                 <Routes>
                     <Route path="products" element={<AdminProductsPage />} />
                     <Route path="users" element={<h1>Users</h1>} />
-                    <Route path="orders" element={<h1>Orders</h1>} />
+                    <Route path="orders" element={<AdminOrdersPage/>} />
                     <Route path="reviews" element={<h1>Reviews</h1>} />
                     <Route path="add-product" element={<AddProductPage />} />
                     <Route path="edit-product" element={<EditProductPage />} />

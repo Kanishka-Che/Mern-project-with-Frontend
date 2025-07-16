@@ -1,11 +1,13 @@
-import React from 'react';
 import axios from "axios";
 import { useEffect, useState } from "react";
 import ProductCard from "../../components/productCard";
+import Footer from '../../components/footer';
+import Header from "../../components/header";
 
 export default function ProductPage(){
     const [products, setProducts] = useState([])
     const [isLoading, setIsLoading] = useState(true)
+    
 
     useEffect(
         ()=>{
@@ -19,17 +21,28 @@ export default function ProductPage(){
             }
         },[isLoading]
     )
+    
 
     return(
-        <div className="w-full h-full flex flex-wrap justify-center items-center">
-            {
+        <div className="w-full ">
+            <div>
+                <Header/>
+            </div>
+            <div className='h-full flex flex-wrap justify-center items-center'>
+ {
                 products.map((product)=>{
                     return(
                         <ProductCard key={product.productId} product={product}/>
                     )
                 })
             }
+
+            </div>
+           <Footer />
             
         </div>
+        
+       
     )
+    
 }

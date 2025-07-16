@@ -4,18 +4,20 @@ import { useState } from "react";
 import ProductCard from "../../components/productCard";
 import Loading from "../../components/loading";
 import toast from "react-hot-toast";
+import Header from '../../components/header';
 
-export default function SearchProductPage() {
+ function SearchProductPage() {
 	const [products, setProducts] = useState([]);
 	const [isLoading, setIsLoading] = useState(true);
 	const [query, setQuery] = useState("");
 
 	return (
 		<div className="w-full h-full flex flex-col items-center p-4">
+			<Header/>
 			<input
 				type="text"
 				placeholder="Search for products..."
-				className="w-[300px] h-[40px] px-4 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent"
+				className="mt-10 w-[300px] h-[40px] px-4 py-1 mb-4 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-accent"
 				value={query}
 				onChange={async (e) => {
 					setQuery(e.target.value);
@@ -64,3 +66,4 @@ export default function SearchProductPage() {
 		</div>
 	);
 }
+export default SearchProductPage;

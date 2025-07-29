@@ -5,6 +5,7 @@ import LoginPage from './pages/login';
 import AdminPage from './pages/adminPage';
 import TestPage from './pages/testPage';
 import { Toaster } from 'react-hot-toast';
+import ProductoverviewPage from './pages/client/productOverView';
 import RegisterPage from './pages/register';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import ForgetPasswordPage from './pages/forgetPassword';
@@ -31,6 +32,7 @@ function App() {
             {/* ✅ With Layout */}
             <Route path='/home' element={<Layout><HomePage /></Layout>} />
             <Route path='/products' element={<Layout><ProductPage /></Layout>} />
+            <Route path='/overview/:id' element={<Layout><ProductoverviewPage /></Layout>} />
             <Route path='/contact' element={<Layout><ContactUsPage /></Layout>} />
             <Route path='/search' element={<Layout><SearchProductPage /></Layout>} />
             <Route path='/testing' element={<Layout><TestPage /></Layout>} />

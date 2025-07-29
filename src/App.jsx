@@ -5,7 +5,7 @@ import LoginPage from './pages/login';
 import AdminPage from './pages/adminPage';
 import TestPage from './pages/testPage';
 import { Toaster } from 'react-hot-toast';
-import ProductoverviewPage from './pages/client/productOverView';
+import ProductoverviewPage from './pages/client/productOverview';
 import RegisterPage from './pages/register';
 import { GoogleOAuthProvider } from '@react-oauth/google';
 import ForgetPasswordPage from './pages/forgetPassword';

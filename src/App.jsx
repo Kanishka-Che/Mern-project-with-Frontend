@@ -13,6 +13,7 @@ import ProductPage from './pages/client/productPage';
 import ContactUsPage from './pages/contactUsPage';
 import SearchProductPage from './pages/client/searchProducts';
 import Layout from './components/layout'; 
+import AboutUsPage from './pages/aboutUspage';
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
             <Route path='/products' element={<Layout><ProductPage /></Layout>} />
             <Route path='/overview/:id' element={<Layout><ProductoverviewPage /></Layout>} />
             <Route path='/contact' element={<Layout><ContactUsPage /></Layout>} />
+            <Route path='/about' element={<Layout><AboutUsPage/></Layout>} />
             <Route path='/search' element={<Layout><SearchProductPage /></Layout>} />
             <Route path='/testing' element={<Layout><TestPage /></Layout>} />
 

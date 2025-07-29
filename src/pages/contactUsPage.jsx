@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
-import Footer from '../components/footer' 
-import Header from '../components/header';
+
 
 const ContactUsPage = () => {
   const [] = useState(false);

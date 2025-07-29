@@ -28,7 +28,7 @@ const ContactUsPage = () => {
   };
   return (
     <div className='w-full'>
-     <Header/>
+    
       
       <div className="min-h-screen bg-gray-50">
        
@@ -202,8 +202,7 @@ const ContactUsPage = () => {
           </div>
         </section>
       </div>
-      
-     <Footer/>     
+         
     </div>
   );
 };

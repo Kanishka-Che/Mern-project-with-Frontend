@@ -12,7 +12,7 @@ import Header from '../../components/header';
 
 	return (
 		<div className="w-full h-full flex flex-col items-center p-4">
-			<Header/>
+			
 			<input
 				type="text"
 				placeholder="Search for products..."
